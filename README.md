@@ -14,7 +14,7 @@
 ## 準備
 ### 1. TwitchAPIキーを取得
 
-公式手順( https://dev.twitch.tv/docs/api/ )のStep1，または以下の記事の「1. 利用登録」を参考にアプリケーションを登録してAPIキーを取得します．名前は「Clip Roulette」，リダイレクトURLは「http://localhost」，カテゴリは「Website Integration」あたりで良いと思います．「クライアントID」と「クライアントの秘密」をあとで使います．
+公式手順( https://dev.twitch.tv/docs/api/ )のStep1，または以下の記事の「1. 利用登録」を参考にアプリケーションを登録してAPIキーを取得します．名前は「Clip Roulette」，リダイレクトURLは「 http://localhost 」，カテゴリは「Website Integration」あたりで良いと思います．「クライアントID」と「クライアントの秘密」をあとで使います．
 
 Twitch APIを利用してみよう https://qiita.com/pasta04/items/750d71d41e5edd12932b
 
