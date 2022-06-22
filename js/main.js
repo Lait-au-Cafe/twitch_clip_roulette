@@ -1,4 +1,4 @@
-const VERSION_STRING = "0.1.0";
+const VERSION_STRING = "0.1.1";
 jQuery(document).ready(() => {
     'use strict';
 
@@ -131,7 +131,7 @@ jQuery(document).ready(() => {
         client.on('chat', (channel, userstate, message, self) => {
             (async () => {
                 // filter user role
-                if('broadcaster' in userstate['badges']) {
+                if(userstate['badges'] !== null && 'broadcaster' in userstate['badges']) {
                     const args = message.trim().split(/\s/);
                     if(args[0] === COMMAND_NAME) {
                         // if argumant is specified, use it as a raider. 
@@ -177,8 +177,8 @@ jQuery(document).ready(() => {
         });
 
         // When raided, save the raider. 
-        client.on("raided", (channel, username, viewers) => {
-            latest_raider_channel_id = username;
+        client.on("raided", (channel, username, viewers, tags) => {
+            latest_raider_channel_id = tags['login'];
         });
     })();
 });
