@@ -151,7 +151,7 @@ jQuery(document).ready(() => {
                         $('#display_name').text(user['display_name']);
                         $('#user_id').text(`@${raider_channel_id}`);
                         const date = new Date(Date.parse(clip_data['created_at']));
-                        $('#date').text(`${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`);
+                        $('#date').text(`${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`);
                         $('#title').text(`「${clip_data['title']}」`);
                         const player = $('#player');
                         player.append(`<source src='${clip_url}'>`);
